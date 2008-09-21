@@ -5,6 +5,9 @@ It's DM IMAP adapter time.  This GEM is based on the initial work of wycats.  Cu
 
 The gem includes a file "gmapper" which provides a sample application of the adapter with some added sugar for Gmail.  Here's how to use it:
 
+<pre><code>
+gem install vanpelt-dm-imap-adapter --source=http://gems.github.com
+  
 require 'gmapper'
 DataMapper.setup(:default, "imap://vanpelt%40gmail.com:pass@imap.gmail.com/INBOX")
 
@@ -21,5 +24,6 @@ m.save
  #=> { :subject => "A new queue", :flags => [:Seen]}
 #archive message
 m.destroy
+</code></pre>
 
 More to come soon... imagine the possibilites!
