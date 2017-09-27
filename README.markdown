@@ -16,13 +16,13 @@ Gmapper::Message.all(:subject => "you're awesome")
 Gmapper::Message.first(:mailbox => "[Gmail]/Drafts", :date.gt => 2.days.ago)
  #=> { :subject => "Dear Mr. Obama" }
 m = Gmapper::Message.create(:subject => "A new queue", :body => "Some YAML")
-#remove message from the drafts folder
+# remove message from the drafts folder
 m.mailbox = "INBOX"
-#mark message read and starred
+# mark message read and starred
 m.flags = [:seen, :flagged]
 m.save
  #=> { :subject => "A new queue", :flags => [:Seen]}
-#archive message
+# archive message
 m.destroy
 </code></pre>
 
